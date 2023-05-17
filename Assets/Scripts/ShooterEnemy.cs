@@ -25,11 +25,17 @@ public class ShooterEnemy : MonoBehaviour
     {
         if (other.tag == ("Player1"))
         {
-            
+            GameManager.Instance.Derrota();
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        
-        
+        if (other.tag == ("EliminarBala"))
+        {
+
+            Destroy(gameObject);
+
+        }
+
+
     }
 }

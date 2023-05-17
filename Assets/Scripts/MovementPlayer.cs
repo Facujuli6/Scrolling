@@ -4,8 +4,6 @@ using UnityEngine;
 
 
 public class MovementPlayer : MonoBehaviour
-
-
 {
     
     [SerializeField] Transform prefabDisparo;
@@ -33,6 +31,19 @@ public class MovementPlayer : MonoBehaviour
         {
             Transform disparo = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
             disparo.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, velocidadDisparo, 0);
+        }
+       
+
+
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Win")
+        {
+           
+
+            GameManager.Instance.Win();
         }
     }
 }

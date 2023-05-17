@@ -10,9 +10,9 @@ public class Shooter : MonoBehaviour
     {
      
         if (transform.position.y > 40)
-     {
-       Destroy(gameObject);
-     }
+        {
+          Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D otro)
     {

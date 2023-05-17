@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemigo
   - Player1
+  - Win
+  - EliminarBala
   layers:
   - Default
   - TransparentFX

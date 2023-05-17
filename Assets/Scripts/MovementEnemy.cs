@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovementEnemy : MonoBehaviour
 {
+   
     private float velocidadX = 1.5f;
         
     private float velocidadY = -1.2f;
@@ -19,10 +20,11 @@ public class MovementEnemy : MonoBehaviour
                 
                 velocidadY =-velocidadY;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == ("Player1"))
         {
+            GameManager.Instance.Derrota();
             Destroy (collision.gameObject);
             Destroy(gameObject);
         }
